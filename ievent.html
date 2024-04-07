@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="alertFunction()">CLICK ME BABY</button> -->
+    <!-- the HTML file -->
+<!-- METHODS 2 & 3 -->
+<button id="btn">CLICK ME BABY</button>
+
+
+    <script>
+        // the JavaScript file
+        // METHODS 2 & 3
+        function alertFunction() {
+            alert("YAY! YOU DID IT!");
+        }
+
+        const btn = document.querySelector("#btn");
+
+        btn.addEventListener("click", function (e) {
+            console.log(e);
+            console.log(e.type); // logs the type of event (e.g., "click")
+            console.log(e.target); // logs the element that triggered the event (in this case, the button)
+        });
+
+        // METHOD 2
+        // btn.onclick = alertFunction;
+
+        // METHOD 3
+        // btn.addEventListener("click", alertFunction);
+    </script>
+</body>
+</html>

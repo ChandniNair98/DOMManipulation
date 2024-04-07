@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+  <div id="container"></div>
+
+  <button id="btn">Click Me Too</button>
+
+  <script>
+
+// your JavaScript file
+
+// the JavaScript file
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", () => {
+  alert("Hello World");
+});
+
+
+const container = document.querySelector("#container");
+
+const content = document.createElement("div");
+content.classList.add("hello");
+content.textContent = "This is the glorious text-content!";
+
+container.appendChild(content);
+
+
+//tasks given 
+
+
+
+// Creating a <p> element with red text
+const pElement = document.createElement("p");
+pElement.style.color = "red";
+pElement.textContent = "Hey I'm red!";
+container.appendChild(pElement);
+
+// Creating an <h3> element with blue text
+const h3Element = document.createElement("h3");
+h3Element.style.color = "blue";
+h3Element.textContent = "I'm a blue h3!";
+container.appendChild(h3Element);
+
+// Creating a <div> element with black border and pink background color
+const divElement = document.createElement("div");
+divElement.style.border = "1px solid black";
+divElement.style.backgroundColor = "pink";
+
+// Creating another <h1> inside the <div>
+const h1InsideDivElement = document.createElement("h1");
+h1InsideDivElement.textContent = "I'm in a div";
+divElement.appendChild(h1InsideDivElement);
+
+// Creating a <p> inside the <div>
+const pInsideDivElement = document.createElement("p");
+pInsideDivElement.textContent = "ME TOO!";
+divElement.appendChild(pInsideDivElement);
+
+// Appending the <div> to the container
+container.appendChild(divElement);
+
+  </script>
+</body>
+</html>
+
+
+<!-- 
+document.querySelector("#container"): This line selects the HTML element with the id "container". It will be the parent element where our content will be appended.
+
+document.createElement("div"): This creates a new div element in memory.
+
+content.classList.add("hello"): This adds a class "hello" to the newly created div. This class can be used for styling or targeting the element in CSS or JavaScript.
+
+content.textContent = "This is the glorious text-content!": This sets the text content of the newly created div.
+
+container.appendChild(content): This appends the div element with the text content to the container div in the HTML. -->
+
+<!-- The class "hello" doesn't have any intrinsic significance; it's simply a class name that has been added to the created div element. If you remove or change the class name, the appearance of the text on the webpage won't be affected unless you have associated CSS styles specifically with that class. The key point is that you're creating a div, adding text to it, and then appending it to the container in the HTML. -->
